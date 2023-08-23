@@ -26,6 +26,14 @@ const missionary = {
   endYear: 1997
 }
 
+const softwareDeveloperOakfields = {
+  show: false,
+  circle: Circle.blue,
+  text:"Software Developer at Oakfieldfarms South Africa",
+  startYear: 1998,
+  endYear: 2001
+}
+
 interface Timeline {
     show: boolean;
     circle: Circle;
@@ -37,5 +45,6 @@ interface Timeline {
 export const timeline: Timeline[] = [
   matriculation,
   programmingTraining,
-  missionary
+  missionary,
+  softwareDeveloperOakfields
 ];
