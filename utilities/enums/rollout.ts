@@ -5,6 +5,6 @@ export enum Line {
 }
 
 export enum Circle {
-    blue="/circles/blue_circle.svg",
-    green="/circles/green_circle.svg"
+    blue="blue",
+    green="green"
 }

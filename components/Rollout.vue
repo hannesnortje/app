@@ -2,7 +2,10 @@
   <div class="d-flex flex-column justified-center">
     <v-img src="/my_picture.jpg" @click="rollOpen(-1)"></v-img>
     <p class="font-weight-light text-center" v-if="!timelineEvents.at(0)?.show">
-      (click picture to roll open)
+      (click picture to roll open first event)
+    </p>
+    <p class="font-weight-light text-center" v-if="timelineEvents.at(0)?.show">
+      <v-btn size="x-large" elevation="2" @click="reverseTimeline">Reverse Timeline</v-btn>
     </p>
 
     <div v-for="(item, index) in timelineEvents" :key="index">
@@ -10,7 +13,8 @@
         v-if="item.show"
         :index="index"
         :circle="item.circle"
-        :text="item.text"
+        :heading="item.heading"
+        :description="item.description"
         :startYear="item.startYear"
         :endYear="item.endYear"
         @next="rollOpen($event)"
@@ -24,23 +28,16 @@
           index < timelineEvents.length - 1
         "
       >
-        (click on event to roll open the next event)
+        (Click on the <span class="font-weight-black">Circle</span> to roll open the Next Event, or
+        on the <span class="font-weight-black">Text</span> for an Elaboration)
       </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Circle } from "@/utilities/enums/rollout";
 import { timeline } from "@/settings/Timeline";
-
-interface Timeline {
-  show: boolean;
-  circle: Circle;
-  text: string;
-  startYear: number;
-  endYear?: number;
-}
+import { Timeline } from "~/interfaces/timeline";
 
 const timelineEvents: Ref<Timeline[]> = ref([]);
 
@@ -59,9 +56,15 @@ const rollOpen = (value: number) => {
 
 onUpdated(() => {
   const num = ++lastIndex;
-  const val = `event_${num}`;
-  document.getElementById(val)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const eventID = `event_${num}`;
+  document.getElementById(eventID)?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
+const reverseTimeline = () => {
+  timelineEvents.value.forEach((event) => (event.show = false));
+  timelineEvents.value.reverse();
+  rollOpen(-1);
+};
 </script>
 
 <style scoped></style>
