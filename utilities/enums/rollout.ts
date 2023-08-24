@@ -8,3 +8,8 @@ export enum Circle {
     blue="blue",
     green="green"
 }
+
+export enum MainMenu {
+    aboutMe = "About Me",
+    settings="Settings"
+}

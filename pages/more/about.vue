@@ -1,9 +1,9 @@
 <template>
-  <ManageEvents></ManageEvents>
+  <AboutMe></AboutMe>
 </template>
 
 <script setup lang="ts">
-import ManageEvents from "../../components/settings/ManageEvents.vue";
+import AboutMe from "../../components/more/AboutMe.vue";
 
 definePageMeta({
   layout: "menu-pages",
