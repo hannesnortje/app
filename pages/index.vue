@@ -40,20 +40,11 @@ import { MainMenu } from "../utilities/enums/rollout";
 
 const menuItems = ref([
   { choice: MainMenu.aboutMe, action: "/more/about" },
+  { choice: MainMenu.education, action: "/more/education" },
   { choice: MainMenu.settings, action: "/settings" },
 ]);
 
 const handleMenuItemClick = (index: number) => {
-  // Handle the selected menu item's action here
-  switch (menuItems.value[index].choice) {
-    case MainMenu.aboutMe:
-      navigateTo(menuItems.value[index].action);
-      break;
-    case MainMenu.settings:
-      navigateTo(menuItems.value[index].action);
-      break;
-    default:
-      break;
-  }
+  navigateTo(menuItems.value[index].action);
 };
 </script>

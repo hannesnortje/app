@@ -32,6 +32,9 @@ switch (route.path) {
   case "/more/about":
     pageName.value = "About Me";
     break;
+  case "/more/education":
+    pageName.value = "Education";
+    break;
   case "/settings":
     pageName.value = "Settings";
     break;

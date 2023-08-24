@@ -11,5 +11,6 @@ export enum Circle {
 
 export enum MainMenu {
     aboutMe = "About Me",
+    education= "Education",
     settings="Settings"
 }
