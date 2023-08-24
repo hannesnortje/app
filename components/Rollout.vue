@@ -31,6 +31,9 @@
         (Click on the <span class="font-weight-black">Circle</span> to roll open the Next Event, or
         on the <span class="font-weight-black">Text</span> for an Elaboration)
       </p>
+      <p class="font-weight-light text-center" v-if="index === timelineEvents.length - 1">
+        (Click on the <span class="font-weight-black">Text</span> for an Elaboration)
+      </p>
     </div>
   </div>
 </template>
