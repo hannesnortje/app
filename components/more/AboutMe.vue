@@ -36,7 +36,7 @@ interface AboutMe {
   handicap_Level: number;
 }
 
-const myInfo: Ref<AboutMe> = reactive(aboutMe);
+const myInfo = reactive(aboutMe);
 </script>
 
 <style scoped></style>

@@ -23,9 +23,8 @@
 
 <script setup lang="ts">
 import { education } from "~/settings/Education";
-import { Education } from "~/interfaces/more";
 
-const events: Ref<Education[]> = ref();
+const events = ref();
 onMounted(() => {
   events.value = education;
 });
