@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       link: [
         { rel: "stylesheet", href: "" },
         { rel: "preconnect", href: "" },
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico/is?v=1.0" },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "canonical", href: url },
       ],
       meta: [
