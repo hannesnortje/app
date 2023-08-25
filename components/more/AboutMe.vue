@@ -17,7 +17,7 @@
       </v-card-text>
     </v-card>
   </v-sheet>
-  <v-bottom-navigation>
+  <v-bottom-navigation absolute="true">
     <v-menu>
       <template v-slot:activator="{ props }">
         <v-btn color="primary" v-bind="props"
