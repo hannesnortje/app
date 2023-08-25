@@ -5,8 +5,8 @@ const title = "CV - Johannes A. Nortjé";
 const shortTitle = "CV - JA Nortjé";
 const description =
   "An unfolding CV of Johannes A. Nortjé";
-const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
-const url = "https://vuetify3nuxt3starter.behonbaker.com/";
+const image = "";
+const url = "";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
