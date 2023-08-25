@@ -30,9 +30,9 @@ export default defineNuxtConfig({
       title: "CV - Johannes A. Nortjé",
       titleTemplate: "%s | CV + Johannes A. Nortjé",
       link: [
-        { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
-        { rel: "preconnect", href: "https://rsms.me/" },
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "stylesheet", href: "" },
+        { rel: "preconnect", href: "" },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico/is?v=1.0" },
         { rel: "canonical", href: url },
       ],
       meta: [
