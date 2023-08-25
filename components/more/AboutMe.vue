@@ -17,6 +17,21 @@
       </v-card-text>
     </v-card>
   </v-sheet>
+  <v-bottom-navigation>
+    <v-menu>
+      <template v-slot:activator="{ props }">
+        <v-btn color="primary" v-bind="props"
+          ><v-icon>mdi-alarm-bell</v-icon>
+
+          <span>Imprint</span>
+        </v-btn>
+      </template>
+      <v-card>
+        <v-card-title>Imprint</v-card-title>
+        <v-card-text>This <strong>About Me</strong> page is my imprint.</v-card-text>
+      </v-card>
+    </v-menu>
+  </v-bottom-navigation>
 </template>
 
 <script setup lang="ts">
